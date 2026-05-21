@@ -1,0 +1,359 @@
+/* ==========================================================================
+   EN CONSTRUCCIÓN - Estilos (solo HTML + CSS)
+   Barra de estado animada + mejoras de look & feel
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Variables
+   -------------------------------------------------------------------------- */
+:root {
+    --color-primario: #FEC107;
+    --color-carbon: #273238;
+    --color-teal-oscuro: #004C3F;
+    --color-gris-claro: #CFD8DD;
+    --color-blanco: #ffffff;
+    --color-blanco-10: rgba(255, 255, 255, 0.1);
+    --color-blanco-20: rgba(255, 255, 255, 0.2);
+    --color-primario-10: rgba(254, 193, 7, 0.1);
+    --color-primario-20: rgba(254, 193, 7, 0.2);
+    --color-gris-40: rgba(207, 216, 221, 0.4);
+    --color-gris-80: rgba(207, 216, 221, 0.8);
+    --fuente-display: 'Inter', sans-serif;
+    --radio-md: 0.5rem;
+    --radio-lg: 0.75rem;
+    --radio-xl: 1rem;
+    --radio-2xl: 1.25rem;
+    --radio-3xl: 1.5rem;
+    --radio-full: 9999px;
+    --transicion: 0.25s ease;
+    --sombra-glow: 0 0 20px rgba(254, 193, 7, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   2. Base y página
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body.pagina-construccion {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuente-display);
+    color: var(--color-blanco);
+    background-color: var(--color-teal-oscuro);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --------------------------------------------------------------------------
+   3. Fondo animado (mejora look & feel)
+   -------------------------------------------------------------------------- */
+.pagina-construccion__fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, var(--color-primario-20) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(0, 121, 106, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 30% at 10% 80%, var(--color-primario-10) 0%, transparent 45%);
+    animation: fondo-suave 12s ease-in-out infinite alternate;
+}
+
+@keyframes fondo-suave {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.85; transform: scale(1.05); }
+}
+
+/* --------------------------------------------------------------------------
+   4. Contenido principal
+   -------------------------------------------------------------------------- */
+.contenido-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contenedor-construccion {
+    max-width: 56rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   5. Navegación (enlace atrás)
+   -------------------------------------------------------------------------- */
+.construccion__navegacion {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.enlace-atras {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primario);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color var(--transicion);
+    text-decoration: none;
+}
+
+.enlace-atras:hover {
+    color: var(--color-blanco);
+}
+
+.enlace-atras__icono {
+    font-size: 1.25rem;
+    transition: transform var(--transicion);
+}
+
+.enlace-atras:hover .enlace-atras__icono {
+    transform: translateX(-4px);
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Tarjeta con icono (glass + badge)
+   -------------------------------------------------------------------------- */
+.tarjeta-icono {
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.tarjeta-icono__glow {
+    position: absolute;
+    inset: 0;
+    background: var(--color-primario-20);
+    filter: blur(100px);
+    border-radius: 50%;
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.tarjeta-icono__caja {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    border-radius: var(--radio-3xl);
+    border: 1px solid var(--color-primario-20);
+    background: rgba(39, 50, 56, 0.6);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-icono__icono {
+    display: block;
+    font-size: 5rem;
+    color: var(--color-primario);
+    animation: icono-pulse 2s ease-in-out infinite;
+}
+
+@keyframes icono-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+.tarjeta-icono__badge {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    background: var(--color-primario);
+    color: var(--color-carbon);
+    padding: 0.25rem 1rem;
+    border-radius: var(--radio-full);
+    font-size: 0.6875rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    box-shadow: var(--sombra-glow);
+}
+
+/* --------------------------------------------------------------------------
+   7. Título y descripción
+   -------------------------------------------------------------------------- */
+.construccion__titulo {
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 0 0 1.5rem 0;
+    color: var(--color-blanco);
+}
+
+.construccion__titulo-destacado {
+    color: var(--color-primario);
+}
+
+.construccion__descripcion {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: var(--color-gris-80);
+    max-width: 42rem;
+    margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 768px) {
+    .construccion__descripcion {
+        font-size: 1.25rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8. Barra de estado (con movimiento)
+   -------------------------------------------------------------------------- */
+.barra-estado {
+    max-width: 28rem;
+    margin: 0 auto 3rem auto;
+}
+
+.barra-estado__encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.75rem;
+}
+
+.barra-estado__etiqueta {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-primario);
+}
+
+.barra-estado__porcentaje {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-blanco);
+}
+
+.barra-estado__pista {
+    width: 100%;
+    height: 0.75rem;
+    background: var(--color-blanco-10);
+    border-radius: var(--radio-full);
+    overflow: hidden;
+}
+
+.barra-estado__relleno {
+    height: 100%;
+    width: calc(var(--progreso, 75) * 1%);
+    min-width: 0;
+    border-radius: var(--radio-full);
+    background: var(--color-primario);
+    box-shadow: var(--sombra-glow);
+    position: relative;
+    overflow: hidden;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shimmer: brillo que recorre la barra */
+.barra-estado__shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        105deg,
+        transparent 0%,
+        transparent 35%,
+        rgba(255, 255, 255, 0.4) 50%,
+        transparent 65%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Franjas diagonales en movimiento (estilo “en construcción”) */
+.barra-estado__franjas {
+    position: absolute;
+    inset: 0;
+    opacity: 0.25;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 6px,
+        rgba(255, 255, 255, 0.15) 6px,
+        rgba(255, 255, 255, 0.15) 12px
+    );
+    background-size: 34px 34px;
+    animation: franjas-mover 1.2s linear infinite;
+}
+
+@keyframes franjas-mover {
+    0% { background-position: 0 0; }
+    100% { background-position: 34px 0; }
+}
+
+.barra-estado__nota {
+    margin-top: 1rem;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--color-gris-40);
+}
+
+/* --------------------------------------------------------------------------
+   9. Botón CTA
+   -------------------------------------------------------------------------- */
+.construccion__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.boton {
+    display: inline-block;
+    font-family: var(--fuente-display);
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color var(--transicion), border-color var(--transicion), color var(--transicion);
+    border-radius: var(--radio-md);
+}
+
+.boton--secundario {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    background: var(--color-blanco-10);
+    color: var(--color-blanco);
+    border: 1px solid var(--color-blanco-20);
+    backdrop-filter: blur(8px);
+}
+
+.boton--secundario:hover {
+    background: var(--color-blanco-20);
+}

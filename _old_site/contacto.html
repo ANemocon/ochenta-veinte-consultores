@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Ochenta Veinte · Calidad & Riesgo · Energía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Header (mismas clases que index) -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="img/logopao3.png" alt="imagotipo QE">
+      </a>
+      <nav class="nav">
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#soluciones">Soluciones</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="enconstruccion-puro.html">ENG</a>
+      </nav>
+      <button type="button" class="menu-toggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero contacto -->
+  <section class="section-contacto-hero">
+        <div class="contacto-hero">
+            <div class="contacto-text">
+                <h1 class="text-contacto-hero">
+                    Vamos a Potenciar Tu <span class="texto-conlinea">Próximo proyecto</span>
+                </h1>
+                <p class="descripcion-contacto">
+                    Aproveche nuestra experiencia técnica en energía para optimizar sus operaciones. Nuestro equipo está listo para brindar la gestión estratégica de riesgos que su empresa necesita.
+                </p>
+            </div>
+        </div>
+  </section>
+ 
+  <section class="section-datos-decontacto">
+      <div class="cuadro-contacto">
+            <div class="datos-unitario">
+                <div class="dato-unitario">
+                    <div class="icono-dato-contacto">
+                        <img class="icono-contacto" src="img/email.gif" alt="icono de email">
+                    </div>
+                    <div>
+                        <h4 class="titulo-unitario">Escríbenos</h4>
+                        <p class="contenido-unitario">qualityenergyc@gmail.com</p>
+                    </div>
+                </div>
+                <div class="dato-unitario">
+                    <div class="icono-dato-contacto">
+                        <img class="icono-contacto" src="img/phone.gif" alt="icono de telefono">
+                    </div>
+                    <div>
+                        <h4 class="titulo-unitario">Llámanos y te asesoramos</h4>
+                        <p class="contenido-unitario">+57 (315) 5677764<br/>Lun - Vie: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <h4 class="social-title">Conéctate con nosotros</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/angie-paola-valderrama-corral-46351353/" 
+                           class="social-icon-link" 
+                           aria-label="LinkedIn">
+                            <svg class="social-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-container">        
+                <div class="contact-card">
+                    <form class="contact-form" id="form" action="https://formspree.io/f/xykpwrgk" method="POST">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Nombre Completo</label>
+                                <input class="form-input" placeholder="Carlos Huertas" type="text" id="name" name="name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="form-input" placeholder="j.doe@empresa.com" type="email" name="mail">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label class="form-label">Nombre de la compañía</label>
+                            <input class="form-input" placeholder="Energy Solutions Inc." type="text" name="text">
+                        </div>
+            
+                        <div class="form-group">
+                            <label class="form-label">Descripción de la consulta</label>
+                            <textarea class="form-textarea" placeholder="Cuéntenos cuáles son sus requerimientos técnicos..." rows="4" name="message"></textarea>
+                        </div>
+            
+                        <button class="form-submit-btn" type="submit" onclick="">
+                            Enviar datos
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+      </div>
+  </section>
+  <!-- Footer (mismas clases que index) -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/8020.png" alt="LOGO 8020">
+        <p>Ofreciendo servicios de consultoría de alto nivel para el mercado global de infraestructura energética desde 2021. Especializados en gestión de calidad , riesgos y mejora continua para grandes poryectos en el sector energético</p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#soluciones">Soluciones</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Paquetes</h4>
+          <ul>
+            <li><a href="index.html#soluciones">Integración de normas</a></li>
+            <li><a href="index.html#soluciones">Consultoría KPIs y riesgos</a></li>
+            <li><a href="index.html#soluciones">Auditorías</a></li>
+            <li><a href="index.html#soluciones">Talleres y cursos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Ochenta Veinte. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="Terminosycondiciones.html#politica">Política de privacidad</a>
+          <a href="Terminosycondiciones.html">Términos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const $form = document.querySelector('#form')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit(event){
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'accept': 'application/json'
+            }
+        })
+        if (response.ok){
+            this.reset()
+            swal({
+                    title: "Tu mensaje ha sido recibido",
+                    text: "Nuestro equipo ya está revisando su solicitud. Nos pondremos en contacto con usted en breve para hablar sobre los próximos pasos.",
+                    icon: "success",
+                    button: "Cerrar",
+                });
+        }
+    }
+
+    </script>
+      <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+          document.querySelector('.nav').classList.toggle('open');
+          this.classList.toggle('open');
+        });
+      </script>
+</body>
+</html>
+

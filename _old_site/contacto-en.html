@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Eighty Twenty · Quality & Risk · Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Header (mismas clases que index) -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index-en.html" class="logo">
+        <img src="img/logopao3.png" alt="QE imagotype">
+      </a>
+      <nav class="nav">
+        <a href="index-en.html#servicios">Services</a>
+        <a href="index-en.html#soluciones">Solutions</a>
+        <a href="nosotros-en.html">About us</a>
+        <a href="#contacto">Contact</a>
+        <a href="contacto.html">ESP</a>
+      </nav>
+      <button type="button" class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero contacto -->
+  <section class="section-contacto-hero">
+        <div class="contacto-hero">
+            <div class="contacto-text">
+                <h1 class="text-contacto-hero">
+                    Let's Power Your <span class="texto-conlinea">Next Project</span>
+                </h1>
+                <p class="descripcion-contacto">
+                    Leverage our technical expertise in energy to optimize your operations. Our team is ready to provide the strategic risk management your company needs.
+                </p>
+            </div>
+        </div>
+  </section>
+ 
+  <section class="section-datos-decontacto">
+      <div class="cuadro-contacto">
+            <div class="datos-unitario">
+                <div class="dato-unitario">
+                    <div class="icono-dato-contacto">
+                        <img class="icono-contacto" src="img/email.gif" alt="email icon">
+                    </div>
+                    <div>
+                        <h4 class="titulo-unitario">Email us</h4>
+                        <p class="contenido-unitario">qualityenergyc@gmail.com</p>
+                    </div>
+                </div>
+                <div class="dato-unitario">
+                    <div class="icono-dato-contacto">
+                        <img class="icono-contacto" src="img/phone.gif" alt="phone icon">
+                    </div>
+                    <div>
+                        <h4 class="titulo-unitario">Call us for advice</h4>
+                        <p class="contenido-unitario">+57 (315) 5677764<br/>Mon - Fri: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                <div class="social-section">
+                    <h4 class="social-title">Connect with us</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/angie-paola-valderrama-corral-46351353/" 
+                           class="social-icon-link" 
+                           aria-label="LinkedIn">
+                            <svg class="social-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-container">        
+                <div class="contact-card">
+                    <form class="contact-form" id="form" action="https://formspree.io/f/xykpwrgk" method="POST">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Full Name</label>
+                                <input class="form-input" placeholder="John Smith" type="text" id="name" name="name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="form-input" placeholder="j.doe@company.com" type="email" name="mail">
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label class="form-label">Company name</label>
+                            <input class="form-input" placeholder="Energy Solutions Inc." type="text" name="text">
+                        </div>
+            
+                        <div class="form-group">
+                            <label class="form-label">Inquiry description</label>
+                            <textarea class="form-textarea" placeholder="Tell us about your technical requirements..." rows="4" name="message"></textarea>
+                        </div>
+            
+                        <button class="form-submit-btn" type="submit" onclick="">
+                            Submit
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+      </div>
+  </section>
+  <!-- Footer (mismas clases que index) -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/8020.png" alt="LOGO 8020">
+        <p>Offering high-level consulting services for the global energy infrastructure market since 2021. Specialized in quality management, risk and continuous improvement for major projects in the energy sector.</p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="index-en.html#servicios">Services</a></li>
+            <li><a href="index-en.html#soluciones">Solutions</a></li>
+            <li><a href="enconstruccion-puro.html">About us</a></li>
+            <li><a href="contacto-en.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="index-en.html#soluciones">Standards integration</a></li>
+            <li><a href="index-en.html#soluciones">Consulting KPIs and risk</a></li>
+            <li><a href="index-en.html#soluciones">Audits</a></li>
+            <li><a href="index-en.html#soluciones">Workshops and training</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Eighty Twenty. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="Terminosycondiciones.html#politica">Política de privacidad</a>
+          <a href="Terminosycondiciones.html">Términos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const $form = document.querySelector('#form')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    async function handleSubmit(event){
+        event.preventDefault()
+        const form = new FormData(this)
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: form,
+            headers: {
+                'accept': 'application/json'
+            }
+        })
+        if (response.ok){
+            this.reset()
+            swal({
+                    title: "Your message has been received",
+                    text: "Our team is already reviewing your request. We will get in touch with you shortly to discuss next steps.",
+                    icon: "success",
+                    button: "Close",
+                });
+        }
+    }
+
+    </script>
+      <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+          document.querySelector('.nav').classList.toggle('open');
+          this.classList.toggle('open');
+        });
+      </script>
+</body>
+</html>
