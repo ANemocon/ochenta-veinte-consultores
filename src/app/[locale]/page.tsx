@@ -99,7 +99,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-slate-900/60" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 pb-20 md:pb-30 xs:pb-130">
+        <div className="container mx-auto px-6 relative z-10 pb-36 md:pb-48">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
