@@ -1,10 +1,16 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from "next";
 
 const withNextIntl = createNextIntlPlugin();
 
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    root: projectRoot,
+  },
 };
 
 export default withNextIntl(nextConfig);

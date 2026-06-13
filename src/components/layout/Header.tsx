@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,7 +19,7 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/">
-          <img src="/img/logo_corto8020.png" alt="Ochenta Veinte" className="h-12 w-auto xs:h-8 xs:w-auto" />
+          <Image src="/img/logo_corto8020.png" alt="Ochenta Veinte" width={160} height={48} priority className="h-8 w-auto xs:h-6 xs:w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 font-medium">

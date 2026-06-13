@@ -1,17 +1,14 @@
 "use client";
 
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import CapexRiskCalculator from '@/components/Calculators/CapexRiskCalculator';
 import {
-  Layers,
   ShieldCheck,
   FileText,
-  Zap,
   CheckCircle,
   Search,
   ArrowRight,
@@ -91,7 +88,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white font-sans text-slate-900">
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center pt-20 max-md:items-start max-md:pt-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover">
             <source src="/video1.mp4" type="video/mp4" />
@@ -99,11 +96,11 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-slate-900/60" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 pb-36 md:pb-48">
+        <div className="container mx-auto px-6 relative z-10 pb-56 sm:pb-52 md:pb-48">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
+            className="max-w-3xl mt-10"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
               {t.rich('hero_title', {
@@ -113,19 +110,19 @@ export default function HomePage() {
             <p className="text-xl text-slate-200 mb-10 leading-relaxed">
               {t('hero_desc')}
             </p>
-            <Link href="/contacto" className="inline-block px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold rounded-lg transition-all transform hover:scale-105">
+            <Link href="/contacto" className="inline-block px-8 py-4 mb-6 max-md:mb-10 bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold rounded-lg transition-all transform hover:scale-105">
               {t('hero_cta')}
             </Link>
           </motion.div>
         </div>
 
         {/* Partners */}
-        <div className="absolute bottom-0 w-full bg-white/10 backdrop-blur-sm py-8 border-t border-white/20">
+        <div className="absolute bottom-0 w-full bg-white/10 backdrop-blur-sm py-8 max-md:py-10 border-t border-white/20">
           <div className="container mx-auto px-6 flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-70 grayscale invert">
-            <img src="/img/logo_siemens.png" alt="Siemens" className="h-8" />
-            <img src="/img/logo_worley.png" alt="Worley" className="h-8" />
-            <img src="/img/logo_isa.png" alt="ISA" className="h-8" />
-            <img src="/img/logo_geb.png" alt="GEB" className="h-8" />
+            <Image src="/img/logo_siemens.png" alt="Siemens" width={120} height={32} className="h-8 w-auto" />
+            <Image src="/img/logo_worley.png" alt="Worley" width={120} height={32} className="h-8 w-auto" />
+            <Image src="/img/logo_isa.png" alt="ISA" width={80} height={32} className="h-8 w-auto" />
+            <Image src="/img/logo_geb.png" alt="GEB" width={120} height={32} className="h-8 w-auto" />
           </div>
         </div>
       </section>

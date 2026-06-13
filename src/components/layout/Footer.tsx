@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
     <footer className="bg-slate-900 text-white pt-20 pb-10">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
         <div className="col-span-1">
-          <img src="/img/8020.png" alt="8020" className="h-10 mb-6 brightness-0 invert" />
+          <Image src="/img/8020.png" alt="8020" width={120} height={40} className="h-10 w-auto mb-6 brightness-0 invert" />
           <p className="text-slate-400 leading-relaxed">
             Consultoría de alto nivel para el mercado global de infraestructura energética desde 2021.
           </p>

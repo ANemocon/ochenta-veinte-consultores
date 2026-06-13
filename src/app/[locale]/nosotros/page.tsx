@@ -1,21 +1,17 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import {
     Target,
     Eye,
-    Users,
     Clock,
-    Scale,
-    BadgeDollarSign,
     BarChart3,
     Zap,
     ShieldCheck,
-    MousePointer2,
-    TrendingUp,
 } from "lucide-react";
 
 // --- Componentes Locales ---
@@ -51,7 +47,7 @@ const TeamMember = ({ name, role, bio, image }: { name: string, role: string, bi
         className="bg-slate-800/40 p-8 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-colors flex flex-col items-center text-center md:items-start md:text-left"
     >
         <div className="relative w-32 h-32 mb-6 overflow-hidden rounded-full border-4 border-slate-800">
-            <img src={image} alt={name} className="object-cover w-full h-full" />
+            <Image src={image} alt={name} fill className="object-cover" sizes="128px" />
         </div>
         <h3 className="text-xl font-bold text-white mb-1">{name}</h3>
         <p className="text-blue-400 font-medium mb-4">{role}</p>

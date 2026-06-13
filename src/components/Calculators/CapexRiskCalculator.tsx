@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldAlert, TrendingDown, Mail, ChevronRight, BarChart3 } from 'lucide-react';
+import { ShieldAlert, TrendingDown, Mail, ChevronRight } from 'lucide-react';
 
 interface Sector {
     id: string;
